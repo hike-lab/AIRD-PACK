@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIRD 데이터 품질 진단 리포트</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f7fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .header p { font-size: 1.1em; opacity: 0.9; }
+        .content { padding: 40px; }
+        .summary-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .summary-box .score {
+            font-size: 4em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .summary-box .grade {
+            font-size: 1.5em;
+            opacity: 0.9;
+        }
+        .dimensions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .dimension-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        .dimension-card h3 { color: #667eea; margin-bottom: 10px; }
+        .dimension-card .score { font-size: 2em; font-weight: bold; color: #333; }
+        .section { margin-bottom: 40px; }
+        .section h2 {
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        th {
+            background-color: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        tr:hover { background-color: #f8f9fa; }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #6c757d;
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        .badge-success { background: #28a745; color: white; }
+        .badge-warning { background: #ffc107; color: #333; }
+        .badge-danger { background: #dc3545; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 AIRD 데이터 품질 진단 리포트</h1>
+            <p>서울특별시 공장등록 데이터 품질 분석</p>
+            <p>생성일시: 2025-12-04 11:38:36</p>
+        </div>
+
+        <div class="content">
+            <div class="summary-box">
+                <h2>종합 품질 점수</h2>
+                <div class="score">85.6</div>
+                <div class="grade">B (양호)</div>
+            </div>
+
+            <div class="section">
+                <h2>📊 데이터 개요</h2>
+                <table>
+                    <tr><th>항목</th><th>값</th></tr>
+                    <tr><td>총 레코드 수</td><td>33,096행</td></tr>
+                    <tr><td>총 컬럼 수</td><td>80개</td></tr>
+                    <tr><td>파일 크기</td><td>약 170.8 MB</td></tr>
+                </table>
+            </div>
+
+            <div class="section">
+                <h2>⭐ 5대 품질 차원</h2>
+                <div class="dimensions">
+                    <div class="dimension-card">
+                        <h3>1️⃣ 완전성</h3>
+                        <div class="score">98.2</div>
+                        <p>결측치 및 데이터 누락 평가</p>
+                    </div>
+                    <div class="dimension-card">
+                        <h3>2️⃣ 정확성</h3>
+                        <div class="score">91.5</div>
+                        <p>데이터 형식 및 유효성 평가</p>
+                    </div>
+                    <div class="dimension-card">
+                        <h3>3️⃣ 일관성</h3>
+                        <div class="score">67.0</div>
+                        <p>중복 및 일관성 평가</p>
+                    </div>
+                    <div class="dimension-card">
+                        <h3>4️⃣ 적시성</h3>
+                        <div class="score">79.9</div>
+                        <p>데이터 최신성 평가</p>
+                    </div>
+                    <div class="dimension-card">
+                        <h3>5️⃣ 유효성</h3>
+                        <div class="score">91.3</div>
+                        <p>값의 범위 및 타당성 평가</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔍 완전성 상세 (결측치 상위 10개)</h2>
+                <table>
+                    <tr>
+                        <th>컬럼명</th>
+                        <th>결측 수</th>
+                        <th>결측 비율</th>
+                        <th>상태</th>
+                    </tr>
+
+                    <tr>
+                        <td>코드매핑_법인주소</td>
+                        <td>31,417</td>
+                        <td>94.93%</td>
+                        <td><span class="badge badge-danger">94.9%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>정제_최초승인일</td>
+                        <td>16,759</td>
+                        <td>50.64%</td>
+                        <td><span class="badge badge-danger">50.6%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>코드매핑_지목</td>
+                        <td>183</td>
+                        <td>0.55%</td>
+                        <td><span class="badge badge-success">0.6%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>정제_지목</td>
+                        <td>183</td>
+                        <td>0.55%</td>
+                        <td><span class="badge badge-success">0.6%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>정제_등록일</td>
+                        <td>29</td>
+                        <td>0.09%</td>
+                        <td><span class="badge badge-success">0.1%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>코드매핑_용도지역</td>
+                        <td>26</td>
+                        <td>0.08%</td>
+                        <td><span class="badge badge-success">0.1%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>정제_용도지역</td>
+                        <td>26</td>
+                        <td>0.08%</td>
+                        <td><span class="badge badge-success">0.1%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>정제_최초등록일</td>
+                        <td>24</td>
+                        <td>0.07%</td>
+                        <td><span class="badge badge-success">0.1%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>코드매핑_공장주소_지번</td>
+                        <td>3</td>
+                        <td>0.01%</td>
+                        <td><span class="badge badge-success">0.0%</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>__row_uid__</td>
+                        <td>0</td>
+                        <td>0.00%</td>
+                        <td><span class="badge badge-success">0.0%</span></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>AIRD Pack v1.0 | AI Ready Data Quality Diagnosis System</p>
+            <p>© 2025 AIRD Project</p>
+        </div>
+    </div>
+</body>
+</html>
