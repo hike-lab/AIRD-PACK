@@ -96,7 +96,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 아래 노트북 URL을 Google Colab에서 열어 실행할 수 있습니다.
 
-#### ML-Pack (4개 파일)
+#### ML-Pack 
 
 1. **데이터 품질 진단**
    - [🔗 Colab URL](https://drive.google.com/file/d/14OWqLVBdiHT44wAkDPiXWD_2nitRFMEZ/view?usp=sharing)
