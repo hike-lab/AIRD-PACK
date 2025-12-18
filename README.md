@@ -99,25 +99,25 @@ OPENAI_API_KEY=your_openai_api_key_here
 #### ML-Pack 
 
 1. **데이터 품질 진단**
-   - [🔗 Colab URL](https://drive.google.com/file/d/14OWqLVBdiHT44wAkDPiXWD_2nitRFMEZ/view?usp=sharing)
+   - [🔗 Colab URL](https://colab.research.google.com/drive/14OWqLVBdiHT44wAkDPiXWD_2nitRFMEZ)
    - 파일: `code/ml-pack/aird_quality_diagnosis.ipynb`
 
 2. **ML Dataset 빌더**
-   - [🔗 Colab URL](https://drive.google.com/file/d/1E_oFb_-hHXo4QlQK4hKBbZx4EuxFUqJj/view?usp=sharing)
+   - [🔗 Colab URL](https://colab.research.google.com/drive/1E_oFb_-hHXo4QlQK4hKBbZx4EuxFUqJj)
    - 파일: `code/ml-pack/aird_ml_factory_pack_builder.ipynb`
 
 3. **ML 학습 예제**
-   - [🔗 Colab URL](https://drive.google.com/file/d/1QqkyWrdElMyGMVGrQAFaHYWuK0ch79cL/view?usp=sharing)
+   - [🔗 Colab URL](https://colab.research.google.com/drive/1QqkyWrdElMyGMVGrQAFaHYWuK0ch79cL)
    - 파일: `code/ml-pack/aird_ml_learning_examples.ipynb`
 
 4. **학습 모델 추론 예제**
-   - [🔗 Colab URL](https://drive.google.com/file/d/1oS5FomJoCgra6T5U70ZdhGjPc4ZmnSDL/view?usp=sharing)
+   - [🔗 Colab URL](https://colab.research.google.com/drive/1oS5FomJoCgra6T5U70ZdhGjPc4ZmnSDL)
    - 파일: `code/ml-pack/aird_ml_inference_examples.ipynb`
 
 #### QA-Pack 
 
 1. **프롬프트 테스트**
-   - [🔗 Colab URL](https://drive.google.com/file/d/17XI7i5CAoi5XTRmv4pjEIL86L8nBQMUb/view?usp=sharing)
+   - [🔗 Colab URL](https://colab.research.google.com/drive/17XI7i5CAoi5XTRmv4pjEIL86L8nBQMUb)
    - 파일: `code/qa-pack/prompt-test.ipynb`
 
 > **참고**: Colab에서 실행 시 환경 변수는 노트북 내에서 직접 설정하거나 Colab의 Secrets 기능을 활용하세요.
